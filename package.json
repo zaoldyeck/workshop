@@ -1,0 +1,65 @@
+{
+  "name": "workshop",
+  "version": "0.0.1",
+  "description": "Build for workshop to cooperate, even for our official website.",
+  "main": "./build/index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zaoldyeck/workshop.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "webpack",
+    "react-router",
+    "flux"
+  ],
+  "author": "zaoldyeck",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zaoldyeck/workshop/issues"
+  },
+  "homepage": "https://github.com/zaoldyeck/workshop",
+  "scripts": {
+    "start": "npm run dev && webpack-dev-server --host 0.0.0.0",
+    "dev": "DEV=1 webpack -d",
+    "build": "DEV=0 webpack -p",
+    "test": "karma"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.5",
+    "chromedriver": "^2.16.0",
+    "flux-constants": "^0.2.2",
+    "immutable": "^3.7.4",
+    "imports-loader": "^0.6.4",
+    "jquery": "^1.11.3",
+    "nightwatch": "^0.7.9",
+    "phantomjs": "^1.9.17",
+    "react": "^0.13.3",
+    "react-cookie": "^0.2.5",
+    "react-redux": "^0.2.2",
+    "react-router": "^0.13.3",
+    "redux": "^1.0.0-rc",
+    "redux-thunk": "^0.1.0",
+    "selenium-standalone": "^4.5.3"
+  },
+  "devDependencies": {
+    "babel": "^5.5.4",
+    "babel-core": "^5.5.4",
+    "babel-loader": "^5.1.4",
+    "css-loader": "^0.15.2",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "node-libs-browser": "^0.5.2",
+    "react-hot-loader": "^1.2.8",
+    "redux-devtools": "^0.1.2",
+    "redux-devtools-diff-monitor": "^0.2.1",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.9.10",
+    "webpack-dev-server": "^1.9.0"
+  }
+}
