@@ -29,7 +29,8 @@ class Index extends Component {
 }
 
 Index.propTypes = {
-    counter: PropTypes.number.isRequired
+    counter: PropTypes.number.isRequired,
+    actions: PropTypes.object.isRequired
 }
 
 export default connect((state)=> {

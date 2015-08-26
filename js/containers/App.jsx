@@ -1,4 +1,5 @@
-import React,{Component} from "react"
+import React,{Component,PropTypes} from "react"
+import {bindActionCreators} from "redux"
 import {Route,RouteHandler,Link} from "react-router"
 import {connect} from "react-redux"
 import * as AccountActions from "../actions/AccountActions"
@@ -6,10 +7,6 @@ import * as AccountActions from "../actions/AccountActions"
 import Header from "../components/Header.jsx"
 import Footer from "../components/Footer.jsx"
 
-@connect(state => ({
-
-}))
-export default
 class App extends Component {
 
     constructor(props, context) {
@@ -27,3 +24,13 @@ class App extends Component {
         )
     }
 }
+
+App.propTypes = {
+    actions: PropTypes.object.isRequired
+}
+
+export default connect((dispatch)=> {
+    return {
+        actions: bindActionCreators(AccountActions, dispatch)
+    }
+})(App)
