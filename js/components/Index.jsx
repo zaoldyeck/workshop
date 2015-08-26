@@ -1,22 +1,16 @@
 import React,{Component,PropTypes} from "react"
+import {bindActionCreators} from "redux"
 import {connect} from "react-redux"
 import * as CounterActions from "../actions/CounterActions"
 
-@connect(state => ({
-    counter: state.counter
-}))
-export default
 class Index extends Component {
-    static propTypes = {
-        counter: PropTypes.number.isRequired
-    }
 
     handleClickIncrement(e) {
-        this.props.dispatch(CounterActions.increment())
+        this.props.actions.increment()
     }
 
     handleClickDecrement(e) {
-        this.props.dispatch(CounterActions.decrement())
+        this.props.actions.decrement()
     }
 
     render() {
@@ -33,3 +27,17 @@ class Index extends Component {
         )
     }
 }
+
+Index.propTypes = {
+    counter: PropTypes.number.isRequired
+}
+
+export default connect((state)=> {
+    return {
+        counter: state.counter
+    }
+}, (dispatch)=> {
+    return {
+        actions: bindActionCreators(CounterActions, dispatch)
+    }
+})(Index)
