@@ -4,7 +4,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin")
 var isDev = JSON.parse(process.env.DEV || "true")
 
 var entries = ["./js/app.jsx"]
-var loaders = ["babel?stage=0"]
+var loaders = ["babel?stage=0&plugins=babel-plugin-object-assign"]
 if (isDev) {
     entries.unshift("webpack-dev-server/client?http://0.0.0.0:8080", "webpack/hot/only-dev-server")
     loaders.unshift("react-hot")
@@ -57,11 +57,12 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
         new ExtractTextPlugin("styles.css"),
         new webpack.DefinePlugin({
-            DEV: isDev
+            __DEV__: isDev
         }),
         new webpack.ProvidePlugin({
             $: "jquery",
-            jQuery: "jquery"
+            jQuery: "jquery",
+            Promise: "bluebird"
         })
     ],
 

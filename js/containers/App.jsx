@@ -18,7 +18,7 @@ class App extends Component {
         return (
             <div>
                 <Header/>
-                <RouteHandler/>
+                {this.props.children}
                 <Footer/>
             </div>
         )

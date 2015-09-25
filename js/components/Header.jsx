@@ -21,9 +21,9 @@ export default class Header extends Component {
 
                     <p>Some additional information here</p>
                     <ul>
-                        <li><Link to="index">首頁</Link></li>
-                        <li><Link to="sign_in">登入</Link></li>
-                        <li><Link to="sign_up">註冊</Link></li>
+                        <li><Link to="/">首頁</Link></li>
+                        <li><Link to="/sign_in">登入</Link></li>
+                        <li><Link to="/sign_up">註冊</Link></li>
                     </ul>
                 </header>
                 <p>Lorem Ipsum dolor set amet....</p>
