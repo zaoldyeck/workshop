@@ -4,8 +4,8 @@ import {Route,RouteHandler,Link} from "react-router"
 import {connect} from "react-redux"
 import * as AccountActions from "../actions/AccountActions"
 
-import Header from "../components/Header.jsx"
-import Footer from "../components/Footer.jsx"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 
 class App extends Component {
 
