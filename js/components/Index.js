@@ -20,9 +20,9 @@ class Index extends Component {
                 <br/>
 
                 <div>計數器</div>
-                <button type="button" onClick={::this.handleClickDecrement}>-</button>
+                <button type="button" onClick={this.handleClickDecrement.bind(this)}>-</button>
                 <span>{this.props.counter}</span>
-                <button type="button" onClick={::this.handleClickIncrement}>+</button>
+                <button type="button" onClick={this.handleClickIncrement.bind(this)}>+</button>
             </div>
         )
     }
