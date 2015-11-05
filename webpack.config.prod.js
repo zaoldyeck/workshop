@@ -6,9 +6,9 @@ module.exports = {
     devtool: "source-map",
     entry: ["./js/app.js"],
     output: {
-        path: path.join(__dirname, "build"),
+        path: path.join(__dirname, "build/static"),
         filename: "bundle.js",
-        publicPath: ""
+        publicPath: "/static/"
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),

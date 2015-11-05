@@ -6,7 +6,6 @@ import Index from "./components/Index"
 import SignIn from "./components/SignIn"
 import SignUp from "./components/SignUp"
 
-
 export default (
     <Route path="/" component={App}>
         <IndexRoute component={Index}/>
