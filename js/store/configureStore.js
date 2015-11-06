@@ -5,8 +5,7 @@ import rootReducer from "../reducers"
 
 const createStoreWithMiddleware = compose(
     applyMiddleware(asyncMiddleware),
-    devTools(),
-    persistState(window.location.href.match(/[?&]debug_session=([^&]+)\b/))
+    window.devToolsExtension || (f => f)
 )(createStore)
 
 export default function configureStore(initialState) {
